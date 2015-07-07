@@ -8,6 +8,8 @@
 
 #import "EUExClipboard.h"
 #import "EUExBaseDefine.h"
+#import "EUtility.h"
+#import "JSON.h"
 
 @implementation EUExClipboard
 
@@ -27,11 +29,16 @@
 -(void)getContent:(NSMutableArray *)inArguments {
 	UIPasteboard * pasteBoard = [UIPasteboard generalPasteboard];
 	NSString * content = [pasteBoard string];
+    if(!content) content=@"";
+    /*
 	if (content) {
 		[self jsSuccessWithName:@"uexClipboard.cbGetContent" opId:0 dataType:UEX_CALLBACK_DATATYPE_TEXT strData:content];
 	} else {
 		[self jsSuccessWithName:@"uexClipboard.cbGetContent" opId:0 dataType:UEX_CALLBACK_DATATYPE_TEXT strData:@""];
     }
+     */
+    NSString *jsStr=[NSString stringWithFormat:@"if(uexClipboard.cbGetContent != null){uexClipboard.cbGetContent(0,0,%@);}",[content JSONFragment]];
+    [EUtility brwView:meBrwView evaluateScript:jsStr];
 }
 
 -(void)clean {

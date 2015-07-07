@@ -34,6 +34,14 @@
 		5A500E7D188FAEA20022E07C /* EUExBaseDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EUExBaseDefine.h; sourceTree = "<group>"; };
 		5A500E7E188FAEA20022E07C /* EUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EUtility.h; sourceTree = "<group>"; };
 		5A60A94818AB499C00C727A6 /* EUExClipboard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EUExClipboard.h; sourceTree = "<group>"; };
+		C602BBBD1B4B827B00A0A28E /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
+		C602BBBE1B4B827B00A0A28E /* JSONParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONParser.h; sourceTree = "<group>"; };
+		C602BBBF1B4B827B00A0A28E /* NSObject+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJSON.h"; sourceTree = "<group>"; };
+		C602BBC01B4B827B00A0A28E /* NSString+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SBJSON.h"; sourceTree = "<group>"; };
+		C602BBC11B4B827B00A0A28E /* SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJSON.h; sourceTree = "<group>"; };
+		C602BBC21B4B827B00A0A28E /* SBJsonBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonBase.h; sourceTree = "<group>"; };
+		C602BBC31B4B827B00A0A28E /* SBJsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonParser.h; sourceTree = "<group>"; };
+		C602BBC41B4B827B00A0A28E /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,11 +105,27 @@
 		5A500E7B188FAEA20022E07C /* engineHeader */ = {
 			isa = PBXGroup;
 			children = (
+				C602BBBC1B4B827B00A0A28E /* JSON */,
 				5A500E7C188FAEA20022E07C /* EUExBase.h */,
 				5A500E7D188FAEA20022E07C /* EUExBaseDefine.h */,
 				5A500E7E188FAEA20022E07C /* EUtility.h */,
 			);
 			path = engineHeader;
+			sourceTree = "<group>";
+		};
+		C602BBBC1B4B827B00A0A28E /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				C602BBBD1B4B827B00A0A28E /* JSON.h */,
+				C602BBBE1B4B827B00A0A28E /* JSONParser.h */,
+				C602BBBF1B4B827B00A0A28E /* NSObject+SBJSON.h */,
+				C602BBC01B4B827B00A0A28E /* NSString+SBJSON.h */,
+				C602BBC11B4B827B00A0A28E /* SBJSON.h */,
+				C602BBC21B4B827B00A0A28E /* SBJsonBase.h */,
+				C602BBC31B4B827B00A0A28E /* SBJsonParser.h */,
+				C602BBC41B4B827B00A0A28E /* SBJsonWriter.h */,
+			);
+			path = JSON;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
