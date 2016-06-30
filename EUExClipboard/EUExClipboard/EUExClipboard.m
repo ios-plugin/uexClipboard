@@ -13,11 +13,11 @@
 
 @implementation EUExClipboard
 
--(id)initWithBrwView:(EBrowserView *) eInBrwView{	
-	if (self = [super initWithBrwView:eInBrwView]) {
-	}
-	return self;
-}
+//-(id)initWithBrwView:(EBrowserView *) eInBrwView{	
+//	if (self = [super initWithBrwView:eInBrwView]) {
+//	}
+//	return self;
+//}
 -(void)copy:(NSMutableArray *)inArguments {
 	NSString * content = [inArguments objectAtIndex:0];
 	if (content == 0) {
@@ -26,10 +26,11 @@
 	UIPasteboard * pasteBoard = [UIPasteboard generalPasteboard];
 	[pasteBoard setString:content];
 }
--(void)getContent:(NSMutableArray *)inArguments {
+-(NSString*)getContent:(NSMutableArray *)inArguments {
 	UIPasteboard * pasteBoard = [UIPasteboard generalPasteboard];
 	NSString * content = [pasteBoard string];
-    if(!content) content=@"";
+    if(!content)
+        content=@"";
     /*
 	if (content) {
 		[self jsSuccessWithName:@"uexClipboard.cbGetContent" opId:0 dataType:UEX_CALLBACK_DATATYPE_TEXT strData:content];
@@ -37,8 +38,10 @@
 		[self jsSuccessWithName:@"uexClipboard.cbGetContent" opId:0 dataType:UEX_CALLBACK_DATATYPE_TEXT strData:@""];
     }
      */
-    NSString *jsStr=[NSString stringWithFormat:@"if(uexClipboard.cbGetContent != null){uexClipboard.cbGetContent(0,0,%@);}",[content JSONFragment]];
-    [EUtility brwView:meBrwView evaluateScript:jsStr];
+    //NSString *jsStr=[NSString stringWithFormat:@"if(uexClipboard.cbGetContent != null){uexClipboard.cbGetContent(0,0,%@);}",[content JSONFragment]];
+    //[EUtility brwView:meBrwView evaluateScript:jsStr];
+    [self.webViewEngine callbackWithFunctionKeyPath:@"uexClipboard.cbGetContent" arguments:ACArgsPack(@0,@0,content)];
+    return content;
 }
 
 -(void)clean {

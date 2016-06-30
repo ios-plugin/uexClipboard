@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2161B3C61D2370E000D624AF /* AppCanKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2161B3C51D2370E000D624AF /* AppCanKit.framework */; };
 		5A500E56188FAE4E0022E07C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A500E55188FAE4E0022E07C /* Foundation.framework */; };
 		5A500E5D188FAE4E0022E07C /* EUExClipboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A500E5C188FAE4E0022E07C /* EUExClipboard.m */; };
 /* End PBXBuildFile section */
@@ -24,13 +25,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2161B3C51D2370E000D624AF /* AppCanKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AppCanKit.framework; sourceTree = "<group>"; };
 		5A500E52188FAE4E0022E07C /* libuexClipboard.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libuexClipboard.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A500E55188FAE4E0022E07C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5A500E59188FAE4E0022E07C /* EUExClipboard-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EUExClipboard-Prefix.pch"; sourceTree = "<group>"; };
 		5A500E5C188FAE4E0022E07C /* EUExClipboard.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EUExClipboard.m; sourceTree = "<group>"; };
 		5A500E63188FAE4E0022E07C /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		5A500E66188FAE4E0022E07C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		5A500E7C188FAEA20022E07C /* EUExBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EUExBase.h; sourceTree = "<group>"; };
 		5A500E7D188FAEA20022E07C /* EUExBaseDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EUExBaseDefine.h; sourceTree = "<group>"; };
 		5A500E7E188FAEA20022E07C /* EUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EUtility.h; sourceTree = "<group>"; };
 		5A60A94818AB499C00C727A6 /* EUExClipboard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EUExClipboard.h; sourceTree = "<group>"; };
@@ -49,6 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2161B3C61D2370E000D624AF /* AppCanKit.framework in Frameworks */,
 				5A500E56188FAE4E0022E07C /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -105,8 +107,8 @@
 		5A500E7B188FAEA20022E07C /* engineHeader */ = {
 			isa = PBXGroup;
 			children = (
+				2161B3C51D2370E000D624AF /* AppCanKit.framework */,
 				C602BBBC1B4B827B00A0A28E /* JSON */,
-				5A500E7C188FAEA20022E07C /* EUExBase.h */,
 				5A500E7D188FAEA20022E07C /* EUExBaseDefine.h */,
 				5A500E7E188FAEA20022E07C /* EUtility.h */,
 			);
@@ -267,6 +269,10 @@
 				CLANG_ENABLE_OBJC_ARC = NO;
 				CONFIGURATION_BUILD_DIR = "$(SRCROOT)/uexClipboard/";
 				DSTROOT = /tmp/EUExClipboard.dst;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/EUExClipboard/engineHeader",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EUExClipboard/EUExClipboard-Prefix.pch";
 				ONLY_ACTIVE_ARCH = NO;
@@ -282,6 +288,10 @@
 				CLANG_ENABLE_OBJC_ARC = NO;
 				CONFIGURATION_BUILD_DIR = "$(SRCROOT)/uexClipboard/";
 				DSTROOT = /tmp/EUExClipboard.dst;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/EUExClipboard/engineHeader",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EUExClipboard/EUExClipboard-Prefix.pch";
 				ONLY_ACTIVE_ARCH = NO;

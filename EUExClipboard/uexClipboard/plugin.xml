@@ -2,6 +2,6 @@
 <uexplugins>
     <plugin name="uexClipboard">
         <method name="copy"></method>
-		<method name="getContent"></method>
+		<method name="getContent" sync = "true"></method>
 	</plugin>
 </uexplugins>
